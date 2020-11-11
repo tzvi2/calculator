@@ -1,52 +1,40 @@
-* {
-    font-size: large;
+html {
+    height: 100%;
 }
 
 body {
-    background: linear-gradient(to right, rgb(4, 4, 219, 0.8), purple);    
-}
-
-input {
-    background: rgb(211, 207, 207);
-}
-
-input:hover {
-    background: rgb(224, 222, 222);
-}
-
-input:active {
-    background: rgb(241, 240, 239);
+    background: linear-gradient(to top, rgb(4, 4, 219, 0.6), purple); 
+    height: 100%;  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
-    padding: 0.5% 0.5%;
-    width: 450px;
-    height: 450px;
-    border: 2px solid rgb(12, 12, 12);
-    border-radius: 5px;
+    max-width: 700px; 
+    height: 60%;
     display: grid;
-    grid-template-rows: 23% repeat(4, 18%);
-    grid-template-columns: repeat(5, 19%);
-    row-gap: 1%;
+    grid-template-rows: 22% repeat(4, 18%);
+    grid-template-columns: repeat(5, 18%);
     column-gap: 1%;
+    row-gap: 1%;
     justify-content: center;
-    margin: 5% auto;
-    background: rgb(243, 247, 244);
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10% auto;
 }
 
 #display {
-    width: 98%;
     grid-column-start: 1;
     grid-column-end: 6;
-    border: 2px solid rgb(109, 104, 104);
-    border-radius: 5px;
-    justify-self: center;
-    margin-top: 1%;
-    padding-right: 1%;
-    text-align: right;
     display: grid;
     grid-template-rows: 45% 45%;
+    justify-content: end;
     align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 3%;
+    padding-right: 2%;
+    padding-bottom: 1%;
     background: rgba(229, 245, 230, 0.8);
 }
 
@@ -58,20 +46,10 @@ input:active {
     font-size: xx-large;
 }
 
-#equals {
-    grid-column: 5;
-    grid-row-start: 3;
-    grid-row-end: 6;
-}
-
-#divide {
-    grid-column: 4;
-}
-
 .zero_container {
-     grid-column-start: 1;
-     grid-column-end: 4;
-     display: flex;
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 #zero {
@@ -82,4 +60,21 @@ input:active {
 #point {
     flex-grow: 1;
     margin-left: 1%;
+}
+
+#equals {
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column: 5;
+}
+
+@media only screen and (min-width: 590px) {
+    .container {
+        margin: 4% auto;
+        height: 80%;
+    }
+
+    input {
+        font-size: x-large;
+    }
 }
