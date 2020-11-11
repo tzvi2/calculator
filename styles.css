@@ -68,7 +68,7 @@ body {
     grid-column: 5;
 }
 
-@media only screen and (min-width: 590px) {
+@media only screen and (min-width: 500px) {
     .container {
         margin: 4% auto;
         height: 80%;
@@ -76,5 +76,23 @@ body {
 
     input {
         font-size: x-large;
+    }
+}
+
+@media only screen and (min-width: 620px) {
+    .container {
+        width: 50%;
+    }
+    #upper {
+        font-size: x-large;
+    }
+    #lower {
+        font-size: xx-large;
+    }
+}
+ 
+@media only screen and (min-width: 1000px) {
+    .container {
+        width: 40%;
     }
 }
